@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>calculator</title>
+	<style>
+		input{width:40px;}
+	</style>
+</head>
+<body>
+	<form name="frm" style="background-color: gray; padding:20px;">
+		<input name="result" style="background-color: lightgrey; border-style: ridge; width: 168px;">
+		<br/><br/>
+		<input type="button" value="1" onClick="cal(this.value)" >
+		<input type="button" value="2" onClick="cal(this.value)">
+		<input type="button" value="3" onClick="cal(this.value)">
+		<input type="button" value="+" onClick="cal(this.value)">
+		<br/><br/>
+		<input type="button" value="4" onClick="cal(this.value)">
+		<input type="button" value="5" onClick="cal(this.value)">
+		<input type="button" value="6" onClick="cal(this.value)">
+		<input type="button" value="-" onClick="cal(this.value)">
+		<br/><br/>
+		<input type="button" value="7" onClick="cal(this.value)">
+		<input type="button" value="8" onClick="cal(this.value)">
+		<input type="button" value="9" onClick="cal(this.value)">
+		<input type="button" value="*" onClick="cal(this.value)">
+		<br/><br/>
+		<input type="reset" value="c" >
+		<input type="button" value="0" onClick="cal(this.value)">
+		<input type="button" value="." onClick="cal(this.value)">
+		<input type="button" value="=" onClick="evalu()">
+	</form>
+
+	<script>
+		function cal(a){
+			document.frm.result.value += a;
+		}
+
+		function evalu() {
+			document.frm.result.value = eval(document.frm.result.value);
+		}
+	</script>
+</body>
+</html>

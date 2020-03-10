@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>JS Cheat Sheet</title>
+</head>
+<body>
+	<h1>hello world</h1>
+
+<!--
+	<script src=script.js></script>
+-->
+
+<script>
+//this is a comment
+
+/* multi line
+comment */
+
+//alert("hello world");
+
+console.log( 'hi bob' );
+
+document.write( '<h1>this renders as html</h1>' );
+
+//variables
+x = 15;
+y = 5;
+
+console.log( x );
+
+//mathematics
+console.log( 'math expressions:' );
+console.log( x+y, x-y, x*y, x/y, x%y );
+
+//increments and decrements
+console.log( 'increment and decrement:' );
+console.log( x=x+1, ++x , --x , x-- , x );
+
+//assignment operators
+console.log( 'Assignment operators:' );
+console.log( x );
+console.log( x=x+2 );
+console.log( x+=2 );
+
+//order of operation
+console.log( 'PEMDAS:' );
+console.log( 50+100/10 );
+console.log( (50+100)/10 );
+
+//boolean datatype
+console.log( 'Boolean:' );
+a = true;
+console.log( a );
+console.log( !a );
+
+//strings
+console.log( 'Strings:' );
+m = "Marco";
+p = 'Polo';
+console.log( m );
+console.log( m + p, m +' '+ p );
+console.log( "1" + "2" );
+console.log( 20 + Number('100') );
+console.log( "I hear \"she said, \'meet me there\'\"." );
+
+//indexing
+console.log( 'Indexing:' );
+somestr = 'Green Eggs and Ham';
+console.log(somestr, somestr.length, somestr[0], somestr[11] );
+console.log( somestr.slice(11,14) );
+console.log( somestr.slice(-7,-4) );
+console.log( somestr.substr(11,3) );
+console.log( somestr.substr(-7,3) );
+console.log( somestr.substring(11,14) );
+
+//more methods
+console.log( 'More Methods:' );
+console.log( somestr.replace('Green', 'Blue') );
+console.log( somestr.indexOf('Eggs') );
+
+//arrays
+console.log( 'Arrays:' );
+arr = ['dad','mom','child'];
+console.log( arr );
+console.log( arr.length, arr[0], arr.indexOf('child') );
+console.log( arr.indexOf('aunt') );
+console.log( arr.push('granny') );
+arr[2] = 'grandpa';
+console.log( arr );
+
+//multidimensional arrays
+console.log('Multidimensional arrays:');
+instruments = ['guitar','drums','bass'];
+genre = ['rock','hip hop','classical'];
+stars = ['Michael Jackson', 'Asap Rocky'];
+musicHobbies = [ instruments, genre, stars ];
+console.log( musicHobbies );
+console.log( musicHobbies[2][1] );
+
+//objects
+console.log('Objects:');
+superhero = {
+	hn:'Superman',
+	fn:'Clark',
+	ln:'Kent',
+	glasses:false,
+	powers:12,
+	weaknesses:2
+};
+superhero.villains = [ 'Lex Luthor', 'Doomsday', 'Metallo' ];
+superhero.city = 'Metropolis';
+superhero.powers = 15;
+console.log(superhero);
+console.log( superhero['fn'], superhero.fn );
+
+//comparisons
+console.log( 'Comparisons' );
+console.log( 5 == 10, 5 == 5, 5 != 5, '5' == 5, '5' === 5);
+console.log( 5 < 10, 5 <= 10, 5 > 10, 5 >= 10);
+
+//logical operators
+console.log( 'Logicals' );
+console.log( (5 < 10) && (5 > 0) );
+console.log( (5 == 10) || (5 > 0) );
+console.log( !(5 == 10) || (5 < 0) );
+
+//conditionals
+console.log( 'Conditionals' );
+myColor= 'green';
+
+if( ( myColor == 'red' ) || (myColor == 'blue' ) ){
+	console.log( myColor + ' is my favorite color!' );
+} else if ( myColor == 'orange' ) {
+	console.log( myColor + ' is my least favorite color!' );
+} else {
+	console.log( myColor + ' is not my favorite color!' );
+};
+
+//switch statement
+switch (myColor){
+	case 'red':
+	case 'blue':
+		console.log( myColor + ' is my favorite color!' );
+		break;
+	case 'orange':
+		console.log( myColor + ' is my least favorite color!' );
+		break;
+	default:
+		console.log( myColor + ' is not my favorite color!' );
+};
+
+//functions
+console.log('Functions:');
+
+//basic function
+function funcname(){
+	console.log('step 1');
+	console.log('step 2');
+};
+
+funcname();
+
+function playFunc( b,c ){
+	d = b + c;
+	return d;
+};
+playFunc( 10, 20 );
+console.log( d );
+console.log( playFunc(1,2) );
+
+//function Expression or anonymous function
+exFunc = function( p ){
+	console.log( p * 10 );
+};
+
+exFunc( 2 );
+
+//Loops
+console.log( 'Loops:' );
+for( var i = 0; i < 10; i++ ){
+	console.log( i );
+};
+
+//another example
+console.log( 'For in Loop:' );
+
+person = { id: 1234, fn:'Peter', ln:'Parker' };
+
+for(k in person){
+	console.log( k+" "+person[k] );
+};
+
+beers=[ 'Corona', 'Modelo', 'Heineken', 'Bud' ];
+
+for( var i in beers ){
+	console.log( i +' '+ beers[i] );
+};
+
+//while loop
+console.log( 'While Loop:' );
+var i = 0;
+while( i < beers.length ){
+	console.log( i +' '+ beers[i] );
+	i++;
+};
+
+//do while loop
+console.log( 'Do/While Loop:' );
+var i= 0;
+do{
+	console.log( i +' '+ beers[i] );
+	i++;
+}
+while( i < beers.length );
+
+</script>
+</body>
+</html>
